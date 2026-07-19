@@ -47,6 +47,7 @@ UART/
 │       ├── modelsim_compilation.jpeg           # ModelSim compile log
 │       ├── modelsim_waveform.jpeg              # ModelSim simulation waveform
 │       ├── quartus_programmer_compilation.jpeg # Quartus full compilation report
+        └── uart_architecture_diagram.png
 └── README.md
 ```
 
@@ -86,10 +87,15 @@ The testbench simulates a PC sending bytes `0x41` ('A') and `0x39` ('9') over `r
 | `0x39` ('9') | `0110000` (expected `0x3`) | `0010000` (expected `0x9`) | ✅ Match |
 
 `DUT/rst` correctly deasserted once `key0_n = 1`; `tx` toggled after each `rx_done` pulse, confirming echo/bounce-back behavior at the RTL level.
+---
+Compile log:
 
-> Compile log: [`results/modelsim_compilation.jpeg`](results/modelsim_compilation.jpeg)
-> Waveform: [`results/modelsim_waveform.jpeg`](results/modelsim_waveform.jpeg)
+ ![results/modelsim_compilation.jpeg](results/modelsim_compilation.jpeg)
+ ---
+Waveform:
 
+![results/modelsim_waveform.jpeg](results/modelsim_waveform.jpeg)
+---
 **Run it yourself (ModelSim):**
 ```tcl
 vlib work
@@ -110,9 +116,11 @@ run -all
 | Fitter | 0 errors — device: 5CGXFC5C6F27C7, 83/29,080 ALMs (<1%), 121 registers, 18/364 pins |
 | Assembler | 0 errors — `UART.sof` generated |
 | Timing Analyzer | Non-blocking timing notes; resolved by adding `UART.sdc` with a 50 MHz (`20.000 ns`) clock constraint |
+---
+ Programmer success: 
 
-> Compilation report: [`results/quartus_programmer_compilation.jpeg`](results/quartus_programmer_compilation.jpeg)
-
+![results/quartus_programmer_compilation.jpeg](results/quartus_programmer_compilation.jpeg)
+---
 ### Pin Assignments (verified from official Terasic C5G User Manual)
 
 | Signal | Pin | I/O Standard |
