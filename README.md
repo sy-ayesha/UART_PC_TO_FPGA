@@ -24,7 +24,7 @@ A UART (Universal Asynchronous Receiver/Transmitter) core implementing full-dupl
 ## Architecture
 
 
-![uart_architecture_diagram](results/uart_architecture_diagram.svg)
+![uart_architecture_diagram](results/uart_architecture_diagram.png)
 
 
 ## Repository Structure
