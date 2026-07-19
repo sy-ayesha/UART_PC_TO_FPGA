@@ -46,7 +46,7 @@ UART/
 ├── results/
 │       ├── modelsim_compilation.jpeg           # ModelSim compile log
 │       ├── modelsim_waveform.jpeg              # ModelSim simulation waveform
-│       ├── quartus_programmer_compilation.jpeg # Quartus full compilation report
+│       ├── quartus_programmer_success.jpeg     # Quartus programmer success
         └── uart_architecture_diagram.png
 └── README.md
 ```
@@ -117,9 +117,8 @@ run -all
 | Assembler | 0 errors — `UART.sof` generated |
 | Timing Analyzer | Non-blocking timing notes; resolved by adding `UART.sdc` with a 50 MHz (`20.000 ns`) clock constraint |
 ---
- Programmer success: 
-
-![results/quartus_programmer_compilation.jpeg](results/quartus_programmer_compilation.jpeg)
+## Programmer Success
+![results/quartus_programmer_success.jpeg](results/quartus_programmer_success.jpeg)
 ---
 ### Pin Assignments (verified from official Terasic C5G User Manual)
 
