@@ -23,12 +23,9 @@ A UART (Universal Asynchronous Receiver/Transmitter) core implementing full-dupl
 
 ## Architecture
 
-```
-PC --TX--> FPGA_RX --> [display_reg] --> HEX0 / HEX1 (7-seg decoders)
-                              |
-                              v
-PC <--RX-- FPGA_TX <----------  (echo / bounce-back)
-```
+
+![uart_architecture_diagram](results/uart_architecture_diagram.svg)
+
 
 ## Repository Structure
 
